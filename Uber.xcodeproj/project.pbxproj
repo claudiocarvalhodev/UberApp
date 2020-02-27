@@ -16,6 +16,9 @@
 		91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */; };
 		91DA1EF324082D3D00681DDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF224082D3D00681DDF /* README.md */; };
 		91DA1EF524082D5F00681DDF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF424082D5F00681DDF /* .gitignore */; };
+		91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */; };
+		91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */; };
+		91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EFD2408332F00681DDF /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		91DA1EF224082D3D00681DDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		91DA1EF424082D5F00681DDF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
+		91DA1EFD2408332F00681DDF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			children = (
 				91DA1EE4240824D000681DDF /* Application */,
 				91DA1EE5240824E400681DDF /* Support Files */,
+				91DA1EF82408323200681DDF /* Components */,
 				91DA1EE6240824F400681DDF /* Resources */,
 				91DA1EE82408251700681DDF /* Scenes */,
 			);
@@ -111,6 +118,7 @@
 			children = (
 				91DA1EE92408252100681DDF /* Launch Screen */,
 				91DA1EEA2408262E00681DDF /* Login */,
+				91DA1EFC240832FF00681DDF /* Sign Up */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -136,8 +144,33 @@
 			children = (
 				91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */,
 				91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */,
+				91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91DA1EF82408323200681DDF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EF92408323E00681DDF /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		91DA1EF92408323E00681DDF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		91DA1EFC240832FF00681DDF /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EFD2408332F00681DDF /* SignUpViewController.swift */,
+			);
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +247,10 @@
 			files = (
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
 				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
+				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
+				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
+				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
 				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
 			);
