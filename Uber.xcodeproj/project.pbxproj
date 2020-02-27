@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
-		91DA1ED52408239E00681DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED42408239E00681DDF /* ViewController.swift */; };
-		91DA1ED82408239E00681DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED62408239E00681DDF /* Main.storyboard */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
 		91DA1EDD2408239F00681DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */; };
+		91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EEB2408265E00681DDF /* LoginViewController.swift */; };
+		91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */; };
+		91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */; };
+		91DA1EF324082D3D00681DDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF224082D3D00681DDF /* README.md */; };
+		91DA1EF524082D5F00681DDF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF424082D5F00681DDF /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91DA1ED42408239E00681DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91DA1ED72408239E00681DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DA1ED92408239F00681DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DA1EDC2408239F00681DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91DA1EDE2408239F00681DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DA1EEB2408265E00681DDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EF224082D3D00681DDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91DA1EF424082D5F00681DDF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				91DA1ECF2408239E00681DDF /* Uber */,
+				91DA1EF224082D3D00681DDF /* README.md */,
+				91DA1EF424082D5F00681DDF /* .gitignore */,
 				91DA1ECE2408239E00681DDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +64,80 @@
 		91DA1ECF2408239E00681DDF /* Uber */ = {
 			isa = PBXGroup;
 			children = (
-				91DA1ED02408239E00681DDF /* AppDelegate.swift */,
-				91DA1ED22408239E00681DDF /* SceneDelegate.swift */,
-				91DA1ED42408239E00681DDF /* ViewController.swift */,
-				91DA1ED62408239E00681DDF /* Main.storyboard */,
-				91DA1ED92408239F00681DDF /* Assets.xcassets */,
-				91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */,
-				91DA1EDE2408239F00681DDF /* Info.plist */,
+				91DA1EE4240824D000681DDF /* Application */,
+				91DA1EE5240824E400681DDF /* Support Files */,
+				91DA1EE6240824F400681DDF /* Resources */,
+				91DA1EE82408251700681DDF /* Scenes */,
 			);
 			path = Uber;
+			sourceTree = "<group>";
+		};
+		91DA1EE4240824D000681DDF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1ED02408239E00681DDF /* AppDelegate.swift */,
+				91DA1ED22408239E00681DDF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		91DA1EE5240824E400681DDF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EDE2408239F00681DDF /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		91DA1EE6240824F400681DDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EED24082ADA00681DDF /* Extensions */,
+				91DA1EE72408250300681DDF /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91DA1EE72408250300681DDF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1ED92408239F00681DDF /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		91DA1EE82408251700681DDF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EE92408252100681DDF /* Launch Screen */,
+				91DA1EEA2408262E00681DDF /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		91DA1EE92408252100681DDF /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		91DA1EEA2408262E00681DDF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EEB2408265E00681DDF /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		91DA1EED24082ADA00681DDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */,
+				91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DA1EF524082D5F00681DDF /* .gitignore in Resources */,
+				91DA1EF324082D3D00681DDF /* README.md in Resources */,
 				91DA1EDD2408239F00681DDF /* LaunchScreen.storyboard in Resources */,
 				91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */,
-				91DA1ED82408239E00681DDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DA1ED52408239E00681DDF /* ViewController.swift in Sources */,
+				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
+				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
+				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +223,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		91DA1ED62408239E00681DDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91DA1ED72408239E00681DDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Uber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uber/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Uber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uber/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
