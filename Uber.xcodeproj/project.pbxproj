@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9110E993240A3A40001C4D05 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110E992240A3A40001C4D05 /* Service.swift */; };
+		9110E996240A43BB001C4D05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110E995240A43BB001C4D05 /* User.swift */; };
 		9114EB8E24089671000DD644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9114EB8D24089671000DD644 /* GoogleService-Info.plist */; };
 		9114EB912408A845000DD644 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114EB902408A845000DD644 /* HomeViewController.swift */; };
 		911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		6D341B933DF492089BBBA3EB /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
+		9110E992240A3A40001C4D05 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9110E995240A43BB001C4D05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9114EB8D24089671000DD644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9114EB902408A845000DD644 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,22 @@
 				B368458FE23074E49A6F1979 /* Pods_Uber.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9110E991240A3A21001C4D05 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9110E992240A3A40001C4D05 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9110E994240A4357001C4D05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9110E995240A43BB001C4D05 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9114EB8F2408A820000DD644 /* Home */ = {
@@ -133,6 +153,8 @@
 			children = (
 				91DA1EE4240824D000681DDF /* Application */,
 				91DA1EE5240824E400681DDF /* Support Files */,
+				9110E991240A3A21001C4D05 /* Service */,
+				9110E994240A4357001C4D05 /* Model */,
 				91DA1EF82408323200681DDF /* Components */,
 				91DA1EE6240824F400681DDF /* Resources */,
 				91DA1EE82408251700681DDF /* Scenes */,
@@ -354,10 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
+				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
 				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
 				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
 				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
+				9110E996240A43BB001C4D05 /* User.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
 				911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */,
 				9114EB912408A845000DD644 /* HomeViewController.swift in Sources */,
