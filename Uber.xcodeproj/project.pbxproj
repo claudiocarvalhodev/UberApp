@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9114EB8E24089671000DD644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9114EB8D24089671000DD644 /* GoogleService-Info.plist */; };
 		9114EB912408A845000DD644 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114EB902408A845000DD644 /* HomeViewController.swift */; };
+		911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */; };
+		911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */; };
+		911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBD2409FA2B00EECF43 /* LocationCell.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		6D341B933DF492089BBBA3EB /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
 		9114EB8D24089671000DD644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9114EB902408A845000DD644 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
+		911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		911FBFBD2409FA2B00EECF43 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +84,28 @@
 		9114EB8F2408A820000DD644 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				911FBFB72409CF9100EECF43 /* Components */,
 				9114EB902408A845000DD644 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		911FBFB72409CF9100EECF43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				911FBFBC2409FA0900EECF43 /* Cell */,
+				911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */,
+				911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		911FBFBC2409FA0900EECF43 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				911FBFBD2409FA2B00EECF43 /* LocationCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		91DA1EC42408239E00681DDF = {
@@ -328,15 +353,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
 				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
 				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
 				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
+				911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */,
 				9114EB912408A845000DD644 /* HomeViewController.swift in Sources */,
 				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
 				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
+				911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
