@@ -14,6 +14,9 @@
 		911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */; };
 		911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */; };
 		911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBD2409FA2B00EECF43 /* LocationCell.swift */; };
+		91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91230B63240AC81B008680E3 /* LocationHandler.swift */; };
+		912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621A8240DB944003FC8FF /* DriverAnnotation.swift */; };
+		912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
 		911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		911FBFBD2409FA2B00EECF43 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		91230B63240AC81B008680E3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		912621A8240DB944003FC8FF /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPlacemark+Extensions.swift"; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9110E995240A43BB001C4D05 /* User.swift */,
+				912621A8240DB944003FC8FF /* DriverAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +133,14 @@
 				911FBFBD2409FA2B00EECF43 /* LocationCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		91230B62240AC7EB008680E3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91230B63240AC81B008680E3 /* LocationHandler.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		91DA1EC42408239E00681DDF = {
@@ -183,6 +198,7 @@
 		91DA1EE6240824F400681DDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				91230B62240AC7EB008680E3 /* Utils */,
 				91DA1EED24082ADA00681DDF /* Extensions */,
 				91DA1EE72408250300681DDF /* Images */,
 			);
@@ -230,6 +246,7 @@
 				91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */,
 				91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */,
 				91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */,
+				912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */,
 				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
 				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
@@ -382,10 +400,12 @@
 				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
 				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
 				9110E996240A43BB001C4D05 /* User.swift in Sources */,
+				912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
 				911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */,
 				9114EB912408A845000DD644 /* HomeViewController.swift in Sources */,
 				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
+				912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */,
 				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
 				911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */,
