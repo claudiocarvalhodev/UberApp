@@ -20,6 +20,8 @@
 		912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621A8240DB944003FC8FF /* DriverAnnotation.swift */; };
 		912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */; };
 		9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF0E240EB82A003B0E43 /* Trip.swift */; };
+		9133BF13240ECBC2003B0E43 /* PickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF12240ECBC2003B0E43 /* PickupViewController.swift */; };
+		915B7E49240EF035001EE092 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		912621A8240DB944003FC8FF /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPlacemark+Extensions.swift"; sourceTree = "<group>"; };
 		9133BF0E240EB82A003B0E43 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		9133BF12240ECBC2003B0E43 /* PickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupViewController.swift; sourceTree = "<group>"; };
+		915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +155,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		9133BF11240ECB9F003B0E43 /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				9133BF12240ECBC2003B0E43 /* PickupViewController.swift */,
+			);
+			path = Pickup;
+			sourceTree = "<group>";
+		};
 		91DA1EC42408239E00681DDF = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 				91DA1EEA2408262E00681DDF /* Login */,
 				91DA1EFC240832FF00681DDF /* Sign Up */,
 				9114EB8F2408A820000DD644 /* Home */,
+				9133BF11240ECB9F003B0E43 /* Pickup */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -256,6 +269,7 @@
 				91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */,
 				912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */,
 				911D0DD6240E669E00ED9F0A /* MapKit+Extensions.swift */,
+				915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +421,7 @@
 				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
 				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
+				915B7E49240EF035001EE092 /* UIViewController+Extensions.swift in Sources */,
 				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
 				911D0DD7240E669E00ED9F0A /* MapKit+Extensions.swift in Sources */,
 				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
@@ -416,6 +431,7 @@
 				911D0DD5240E53F100ED9F0A /* RideActionView.swift in Sources */,
 				911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */,
 				9114EB912408A845000DD644 /* HomeViewController.swift in Sources */,
+				9133BF13240ECBC2003B0E43 /* PickupViewController.swift in Sources */,
 				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
 				912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */,
 				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
