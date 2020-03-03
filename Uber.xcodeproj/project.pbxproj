@@ -19,6 +19,7 @@
 		91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91230B63240AC81B008680E3 /* LocationHandler.swift */; };
 		912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621A8240DB944003FC8FF /* DriverAnnotation.swift */; };
 		912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */; };
+		9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF0E240EB82A003B0E43 /* Trip.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		91230B63240AC81B008680E3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		912621A8240DB944003FC8FF /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPlacemark+Extensions.swift"; sourceTree = "<group>"; };
+		9133BF0E240EB82A003B0E43 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				9110E995240A43BB001C4D05 /* User.swift */,
 				912621A8240DB944003FC8FF /* DriverAnnotation.swift */,
+				9133BF0E240EB82A003B0E43 /* Trip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */,
 				91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */,
 				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
 				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
