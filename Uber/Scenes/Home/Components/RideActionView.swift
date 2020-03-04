@@ -12,11 +12,14 @@ import MapKit
 protocol RideActionViewDelegate: class {
     func uploadTrip(_ view: RideActionView)
     func cancelTrip()
+    func pickupPassenger()
+    func dropOffPassenger()
 }
 
 enum RideActionViewConfiguration {
     case requestRide
     case tripAccepted
+    case driverArrived
     case pickupPassenger
     case tripInProgress
     case endTrip
@@ -59,10 +62,16 @@ class RideActionView: UIView {
         }
     }
     
-    var config = RideActionViewConfiguration()
+    
     var buttonAction = ButtonAction()
     weak var delegate: RideActionViewDelegate?
     var user: User?
+    
+    var config = RideActionViewConfiguration() {
+        didSet {
+            configureUI(withConfig: config)
+        }
+    }
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -175,16 +184,16 @@ class RideActionView: UIView {
         case .getDirections:
             print("DEBUG: Handle get directions...")
         case .pickup:
-            print("DEBUG: Handle pickup...")
+            delegate?.pickupPassenger()
         case .dropOff:
-            print("DEBUG: Handle drop off...")
+            delegate?.dropOffPassenger()
         }
     }
     
     
     // MARK: - Helper Functions
     
-    func configureUI(withConfig config: RideActionViewConfiguration) {
+    private func configureUI(withConfig config: RideActionViewConfiguration) {
         
         switch config {
         case .requestRide:
@@ -205,6 +214,14 @@ class RideActionView: UIView {
             
             infoViewLabel.text = String(user.fullname.first ?? "X")
             uberInfoLabel.text = user.fullname
+            
+        case .driverArrived:
+            guard let user = user else { return }
+            
+            if user.accountType == .driver {
+                titleLabel.text = "Driver Has Arrived"
+                addressLabel.text = "Please meet driver at pickup location"
+            }
             
         case .pickupPassenger:
             
@@ -237,6 +254,8 @@ class RideActionView: UIView {
                 buttonAction = .dropOff
                 actionButton.setTitle(buttonAction.description, for: .normal)
             }
+            
+            titleLabel.text = "Arrived at Destination"
         }
     }
 }
