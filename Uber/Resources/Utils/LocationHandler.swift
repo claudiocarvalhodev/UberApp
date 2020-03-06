@@ -8,9 +8,9 @@
 
 import CoreLocation
 
-class LocationHnadler: NSObject, CLLocationManagerDelegate {
+class LocationHandler: NSObject, CLLocationManagerDelegate {
     
-    static let shared = LocationHnadler()
+    static let shared = LocationHandler()
     var locationManager: CLLocationManager!
     var location: CLLocation?
     
@@ -27,3 +27,4 @@ class LocationHnadler: NSObject, CLLocationManagerDelegate {
         }
     }
 }
+

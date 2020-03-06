@@ -14,7 +14,7 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var location = LocationHnadler.shared.locationManager.location
+    private var location = LocationHandler.shared.locationManager.location
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -31,10 +31,10 @@ class SignUpViewController: UIViewController {
     }()
     
     private lazy var fullnameContainerView: UIView = {
-           let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: fullnameTextField)
-           view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-           return view
-       }()
+        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: fullnameTextField)
+        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        return view
+    }()
     
     private lazy var passwordContainerView: UIView = {
         let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: passwordTextField)
@@ -43,21 +43,25 @@ class SignUpViewController: UIViewController {
     }()
     
     private lazy var accountTypeContainerView: UIView = {
-        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_account_box_white_2x"), segmentedControl: accountTypeSegmentedControl)
+        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_account_box_white_2x"),
+                                               segmentedControl: accountTypeSegmentedControl)
         view.heightAnchor.constraint(equalToConstant: 80).isActive = true
         return view
     }()
     
     private let emailTextField: UITextField = {
-        return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
+        return UITextField().textField(withPlaceholder: "Email",
+                                       isSecureTextEntry: false)
     }()
     
     private let fullnameTextField: UITextField = {
-           return UITextField().textField(withPlaceholder: "Fullname", isSecureTextEntry: false)
-       }()
+        return UITextField().textField(withPlaceholder: "Fullname",
+                                       isSecureTextEntry: false)
+    }()
     
     private let passwordTextField: UITextField = {
-        return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+        return UITextField().textField(withPlaceholder: "Password",
+                                       isSecureTextEntry: true)
     }()
     
     private let accountTypeSegmentedControl: UISegmentedControl = {
@@ -74,55 +78,58 @@ class SignUpViewController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
-     }()
+    }()
     
     let alreadyHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
-        let attributedTitle = NSMutableAttributedString(string: "Already have an accont? ", attributes: [NSMutableAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray])
-
+        let attributedTitle = NSMutableAttributedString(string: "Already have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.uberBlue]))
+        
         button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+        
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
     }()
     
-    // MARK: - View Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
     }
     
     // MARK: - Selectors
     
     @objc func handleSignUp() {
         guard let email = emailTextField.text else { return }
-        guard let fullname = fullnameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
         let accountTypeIndex = accountTypeSegmentedControl.selectedSegmentIndex
-        
+                
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                print("Failed to register user with error \(error.localizedDescription)")
+                print("DEBUG: Failed to register user with error \(error.localizedDescription)")
                 return
             }
             
             guard let uid = result?.user.uid else { return }
             
             let values = ["email": email,
-                                   "fullname": fullname,
-                                   "accountType": accountTypeIndex] as [String : Any]
+                          "fullname": fullname,
+                          "accountType": accountTypeIndex] as [String : Any]
             
             if accountTypeIndex == 1 {
                 let geofire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
                 guard let location = self.location else { return }
-                geofire.setLocation(location, forKey: uid, withCompletionBlock:  { (error) in
-                    self.uploadUserDataAndShowHomeViewController(uid: uid, values: values)
-                    
+                
+                geofire.setLocation(location, forKey: uid, withCompletionBlock: { (error) in
+                    self.uploadUserDataAndShowHomeController(uid: uid, values: values)
                 })
             }
             
-            self.uploadUserDataAndShowHomeViewController(uid: uid, values: values)
+            self.uploadUserDataAndShowHomeController(uid: uid, values: values)
         }
     }
     
@@ -132,12 +139,12 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Helper Functions
     
-    func uploadUserDataAndShowHomeViewController(uid: String, values: [String: Any]) {
-        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeViewController else { return }
+    func uploadUserDataAndShowHomeController(uid: String, values: [String: Any]) {
+        REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ContainerViewController else { return }
             controller.configure()
             self.dismiss(animated: true, completion: nil)
-        }
+        })
     }
     
     func configureUI() {
@@ -154,15 +161,16 @@ class SignUpViewController: UIViewController {
                                                    signUpButton])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
-        stack.spacing = 16
+        stack.spacing = 24
         
         view.addSubview(stack)
-        stack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
+        stack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor,
+                     right: view.rightAnchor, paddingTop: 40, paddingLeft: 16,
+                     paddingRight: 16)
         
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.centerX(inView: view)
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
-        
     }
+    
 }
-

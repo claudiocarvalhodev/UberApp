@@ -19,9 +19,16 @@
 		91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91230B63240AC81B008680E3 /* LocationHandler.swift */; };
 		912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621A8240DB944003FC8FF /* DriverAnnotation.swift */; };
 		912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */; };
+		912FA5BE2411699800891851 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5BD2411699800891851 /* MenuViewController.swift */; };
+		912FA5C0241169AE00891851 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5BF241169AE00891851 /* ContainerViewController.swift */; };
+		912FA5C3241175E500891851 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C2241175E500891851 /* MenuHeader.swift */; };
+		912FA5C62411ACFD00891851 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C52411ACFD00891851 /* SettingsViewController.swift */; };
+		912FA5CA2411B3C400891851 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C92411B3C400891851 /* UserInfoHeader.swift */; };
+		912FA5CC2411BFE700891851 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5CB2411BFE700891851 /* AddLocationViewController.swift */; };
 		9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF0E240EB82A003B0E43 /* Trip.swift */; };
 		9133BF13240ECBC2003B0E43 /* PickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF12240ECBC2003B0E43 /* PickupViewController.swift */; };
 		915B7E49240EF035001EE092 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */; };
+		91870B222412B51500E8D372 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91870B212412B51500E8D372 /* CircularProgressView.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
@@ -51,9 +58,16 @@
 		91230B63240AC81B008680E3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		912621A8240DB944003FC8FF /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPlacemark+Extensions.swift"; sourceTree = "<group>"; };
+		912FA5BD2411699800891851 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		912FA5BF241169AE00891851 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		912FA5C2241175E500891851 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
+		912FA5C52411ACFD00891851 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		912FA5C92411B3C400891851 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		912FA5CB2411BFE700891851 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		9133BF0E240EB82A003B0E43 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		9133BF12240ECBC2003B0E43 /* PickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupViewController.swift; sourceTree = "<group>"; };
 		915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		91870B212412B51500E8D372 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,12 +169,57 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		912FA5BC241168E800891851 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C1241175D100891851 /* Components */,
+				912FA5BD2411699800891851 /* MenuViewController.swift */,
+				912FA5BF241169AE00891851 /* ContainerViewController.swift */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		912FA5C1241175D100891851 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C2241175E500891851 /* MenuHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		912FA5C42411ACCE00891851 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C82411B3A100891851 /* Components */,
+				912FA5C52411ACFD00891851 /* SettingsViewController.swift */,
+				912FA5CB2411BFE700891851 /* AddLocationViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		912FA5C82411B3A100891851 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C92411B3C400891851 /* UserInfoHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		9133BF11240ECB9F003B0E43 /* Pickup */ = {
 			isa = PBXGroup;
 			children = (
+				91870B202412B4F600E8D372 /* Components */,
 				9133BF12240ECBC2003B0E43 /* PickupViewController.swift */,
 			);
 			path = Pickup;
+			sourceTree = "<group>";
+		};
+		91870B202412B4F600E8D372 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91870B212412B51500E8D372 /* CircularProgressView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		91DA1EC42408239E00681DDF = {
@@ -236,11 +295,13 @@
 		91DA1EE82408251700681DDF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				912FA5C42411ACCE00891851 /* Settings */,
 				91DA1EE92408252100681DDF /* Launch Screen */,
 				91DA1EEA2408262E00681DDF /* Login */,
 				91DA1EFC240832FF00681DDF /* Sign Up */,
 				9114EB8F2408A820000DD644 /* Home */,
 				9133BF11240ECB9F003B0E43 /* Pickup */,
+				912FA5BC241168E800891851 /* Side Menu */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -418,6 +479,8 @@
 				9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */,
 				91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */,
 				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
+				912FA5CC2411BFE700891851 /* AddLocationViewController.swift in Sources */,
+				912FA5C3241175E500891851 /* MenuHeader.swift in Sources */,
 				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
 				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
 				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
@@ -425,7 +488,9 @@
 				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
 				911D0DD7240E669E00ED9F0A /* MapKit+Extensions.swift in Sources */,
 				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
+				912FA5C0241169AE00891851 /* ContainerViewController.swift in Sources */,
 				9110E996240A43BB001C4D05 /* User.swift in Sources */,
+				912FA5CA2411B3C400891851 /* UserInfoHeader.swift in Sources */,
 				912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
 				911D0DD5240E53F100ED9F0A /* RideActionView.swift in Sources */,
@@ -435,8 +500,11 @@
 				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
 				912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */,
 				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
+				91870B222412B51500E8D372 /* CircularProgressView.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
+				912FA5C62411ACFD00891851 /* SettingsViewController.swift in Sources */,
 				911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */,
+				912FA5BE2411699800891851 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,14 +22,14 @@ let REF_TRIPS = DB_REF.child("trips")
 struct DriverService {
     static let shared = DriverService()
     
-    func observerTrips(completion: @escaping(Trip) -> Void) {
-         REF_TRIPS.observe(.childAdded) { (snapshot) in
-             guard let dictionary = snapshot.value as? [String: Any] else { return }
-             let uid = snapshot.key
-             let trip = Trip(passengerUid: uid, dictionary: dictionary)
-             completion(trip)
-         }
-     }
+    func observeTrips(completion: @escaping(Trip) -> Void) {
+        REF_TRIPS.observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let uid = snapshot.key
+            let trip = Trip(passengerUid: uid, dictionary: dictionary)
+            completion(trip)
+        }
+    }
     
     func observeTripCancelled(trip: Trip, completion: @escaping() -> Void) {
         REF_TRIPS.child(trip.passengerUid).observeSingleEvent(of: .childRemoved) { _ in
@@ -37,15 +37,15 @@ struct DriverService {
         }
     }
     
-    
     func acceptTrip(trip: Trip, completion: @escaping(Error?, DatabaseReference) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let values = ["driverUid": uid, "state": TripState.accepted.rawValue] as [String : Any]
-        
+        let values = ["driverUid": uid,
+                      "state": TripState.accepted.rawValue] as [String : Any]
         REF_TRIPS.child(trip.passengerUid).updateChildValues(values, withCompletionBlock: completion)
     }
     
-    func updateTripState(trip: Trip, state: TripState, completion: @escaping(Error?, DatabaseReference) -> Void) {
+    func updateTripState(trip: Trip, state: TripState,
+                         completion: @escaping(Error?, DatabaseReference) -> Void) {
         REF_TRIPS.child(trip.passengerUid).child("state").setValue(state.rawValue, withCompletionBlock: completion)
         
         if state == .completed {
@@ -66,58 +66,61 @@ struct PassengerService {
     static let shared = PassengerService()
     
     func fetchDrivers(location: CLLocation, completion: @escaping(User) -> Void) {
-         let geofire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
-         
-         REF_DRIVER_LOCATIONS.observe(.value) { (snapshot) in
-             geofire.query(at: location, withRadius: 50).observe(.keyEntered, with: { (uid, location) in
-                Service.shared.fetchUserData(uid: uid) { (user) in
-                     var driver = user
-                     driver.location = location
-                     completion(driver)
-                 }
-             })
-         }
-     }
+        let geofire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
+        
+        REF_DRIVER_LOCATIONS.observe(.value) { (snapshot) in
+            geofire.query(at: location, withRadius: 50).observe(.keyEntered, with: { (uid, location) in
+                Service.shared.fetchUserData(uid: uid, completion: { (user) in
+                    var driver = user
+                    driver.location = location
+                    completion(driver)
+                })
+            })
+        }
+    }
     
     func uploadTrip(_ pickupCoordinates: CLLocationCoordinate2D, _ destinationCoordinates: CLLocationCoordinate2D, completion: @escaping(Error?, DatabaseReference) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-
+        
         let pickupArray = [pickupCoordinates.latitude, pickupCoordinates.longitude]
         let destinationArray = [destinationCoordinates.latitude, destinationCoordinates.longitude]
-
+        
         let values = ["pickupCoordinates": pickupArray,
-                     "destinationCoordinates": destinationArray,
-        "state": TripState.requested.rawValue] as [String : Any]
-
+                      "destinationCoordinates": destinationArray,
+                      "state": TripState.requested.rawValue] as [String : Any]
+        
         REF_TRIPS.child(uid).updateChildValues(values, withCompletionBlock: completion)
     }
     
-    func observerCurrentTrip(completion: @escaping(Trip) -> Void) {
-          guard let uid = Auth.auth().currentUser?.uid else { return }
-          
-          REF_TRIPS.child(uid).observe(.value) { (snapshot) in
-              guard let dictionary = snapshot.value as? [String: Any] else { return }
-              let uid = snapshot.key
-              let trip = Trip(passengerUid: uid, dictionary: dictionary)
-              completion(trip)
-          }
-      }
+    func observeCurrentTrip(completion: @escaping(Trip) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        REF_TRIPS.child(uid).observe(.value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let uid = snapshot.key
+            let trip = Trip(passengerUid: uid, dictionary: dictionary)
+            completion(trip)
+        }
+    }
     
     func deleteTrip(completion: @escaping(Error?, DatabaseReference) -> Void) {
-          guard let uid = Auth.auth().currentUser?.uid else { return }
-          REF_TRIPS.child(uid).removeValue(completionBlock: completion)
-      }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        REF_TRIPS.child(uid).removeValue(completionBlock: completion)
+    }
+    
+    func saveLocation(locationString: String, type: LocationType, completion: @escaping (Error?, DatabaseReference) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let key: String = type == .home ? "homeLocation" : "workLocation"
+        REF_USERS.child(uid).child(key).setValue(locationString, withCompletionBlock: completion)
+    }
 }
-
 
 // MARK: - SharedService
 
 struct Service {
-    
     static let shared = Service()
     
     func fetchUserData(uid: String, completion: @escaping(User) -> Void) {
-       
         REF_USERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             guard let dictionary = snapshot.value as? [String: Any] else { return }
             let uid = snapshot.key

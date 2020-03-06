@@ -16,20 +16,35 @@ protocol PickupViewControllerDelegate: class {
 class PickupViewController: UIViewController {
     
     // MARK: - Properties
+    
     weak var delegate: PickupViewControllerDelegate?
     private let mapView = MKMapView()
     let trip: Trip
     
+    private lazy var circularProgressView: CircularProgressView = {
+        let frame = CGRect(x: 0, y: 0, width: 360, height: 360)
+        let cp = CircularProgressView(frame: frame)
+        
+        cp.addSubview(mapView)
+        mapView.setDimensions(height: 268, width: 268)
+        mapView.layer.cornerRadius = 268 / 2
+        mapView.centerX(inView: cp)
+        mapView.centerY(inView: cp, constant: 32)
+        
+        return cp
+    }()
+    
     private let cancelButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "baseline_clear_white_36pt_2x").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.setDimensions(height: 35, width: 35)
         button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)
         return button
     }()
     
     private let pickupLabel: UILabel = {
         let label = UILabel()
-        label.text = "Would you like to pickup this passenger?"
+        label.text = "Would you like to pickup this passsenger?"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
         return label
@@ -37,12 +52,11 @@ class PickupViewController: UIViewController {
     
     private let acceptTripButton: UIButton = {
         let button = UIButton(type: .system)
-        //button.setImage(#imageLiteral(resourceName: <#T##String#>).withRenderingMode(.alwaysOriginal), for: .normal)
         button.addTarget(self, action: #selector(handleAcceptTrip), for: .touchUpInside)
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.setTitle("ACCEPT TRIP", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.setTitle("ACCEPT TRIP", for: .normal)
         return button
     }()
     
@@ -53,13 +67,15 @@ class PickupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        configureUI()
+        configureMapView()
+        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -70,7 +86,16 @@ class PickupViewController: UIViewController {
     
     @objc func handleAcceptTrip() {
         DriverService.shared.acceptTrip(trip: trip) { (error, ref) in
-            self.delegate?.didAcceptTrip(self.trip)
+           self.delegate?.didAcceptTrip(self.trip)
+        }
+    }
+    
+    @objc func animateProgress() {
+        circularProgressView.animatePulsatingLayer()
+        circularProgressView.setProgressWithAnimation(duration: 10, value: 0) {
+            DriverService.shared.updateTripState(trip: self.trip, state: .denied) { (err, ref) in
+                self.dismiss(animated: true, completion: nil)
+           }
         }
     }
     
@@ -80,39 +105,7 @@ class PickupViewController: UIViewController {
     
     // MARK: - API
     
-    
     // MARK: - Helper Functions
-    
-    func configure() {
-        configureUI()
-        configureMapView()
-    }
-    
-    func configureUI() {
-        view.backgroundColor = .uberGrayDark
-        
-        view.addSubview(cancelButton)
-        cancelButton.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-                            left: view.leftAnchor,
-                            paddingLeft: 16)
-        cancelButton.setDimensions(height: 30, width: 30)
-        
-        view.addSubview(mapView)
-        mapView.setDimensions(height: 270, width: 270)
-        mapView.layer.cornerRadius = 270 / 2
-        mapView.centerX(inView: view)
-        mapView.centerY(inView: view, constant: -200)
-        
-        view.addSubview(pickupLabel)
-        pickupLabel.centerX(inView: view)
-        pickupLabel.anchor(top: mapView.bottomAnchor, paddingTop: 16)
-        
-        view.addSubview(acceptTripButton)
-        acceptTripButton.anchor(top: pickupLabel.bottomAnchor,
-                                left: view.leftAnchor,
-                                right: view.rightAnchor,
-                                paddingTop: 16, paddingLeft: 32, paddingRight: 32, height: 50)
-    }
     
     func configureMapView() {
         let region = MKCoordinateRegion(center: trip.pickupCoordinates, latitudinalMeters: 1000, longitudinalMeters: 1000)
@@ -120,4 +113,28 @@ class PickupViewController: UIViewController {
         
         mapView.addAnnotationAndSelect(forCoordinate: trip.pickupCoordinates)
     }
+    
+    func configureUI() {
+        view.backgroundColor = .uberGrayDark
+        
+        view.addSubview(cancelButton)
+        cancelButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
+                            paddingLeft: 16)
+        
+        view.addSubview(circularProgressView)
+        circularProgressView.setDimensions(height: 360, width: 360)
+        circularProgressView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
+        circularProgressView.centerX(inView: view)
+        
+        view.addSubview(pickupLabel)
+        pickupLabel.centerX(inView: view)
+        pickupLabel.anchor(top: circularProgressView.bottomAnchor, paddingTop: 32)
+        
+        view.addSubview(acceptTripButton)
+        acceptTripButton.anchor(top: pickupLabel.bottomAnchor, left: view.leftAnchor,
+                                right: view.rightAnchor, paddingTop: 16, paddingLeft: 32,
+                                paddingRight: 32, height: 50)
+        
+    }
+    
 }
