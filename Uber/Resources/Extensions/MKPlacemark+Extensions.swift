@@ -17,7 +17,7 @@ extension MKPlacemark {
             guard let locality = locality else { return nil }
             guard let adminArea = administrativeArea else { return nil }
             
-            return "\(subThoroughfare) \(thoroughfare), \(locality), \(adminArea)"
+            return "\(subThoroughfare) \(thoroughfare), \(locality), \(adminArea) "
         }
     }
 }

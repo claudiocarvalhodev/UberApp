@@ -9,7 +9,6 @@
 import MapKit
 
 class DriverAnnotation: NSObject, MKAnnotation {
-    
     dynamic var coordinate: CLLocationCoordinate2D
     var uid: String
     
@@ -24,3 +23,4 @@ class DriverAnnotation: NSObject, MKAnnotation {
         }
     }
 }
+

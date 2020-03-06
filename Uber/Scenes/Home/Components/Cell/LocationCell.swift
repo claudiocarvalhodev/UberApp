@@ -20,18 +20,16 @@ class LocationCell: UITableViewCell {
         }
     }
     
-    private let titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        //label.text = "123 Main Street"
         return label
     }()
     
-    private let addressLabel: UILabel = {
+    var addressLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
-        //label.text = "123 Main Street, Washington, DC"
         return label
     }()
     
@@ -39,25 +37,16 @@ class LocationCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Helper Functions
-    
-    func configureUI() {
-        selectionStyle = .none
         
         let stack = UIStackView(arrangedSubviews: [titleLabel, addressLabel])
-        stack.axis = .vertical
         stack.distribution = .fillEqually
+        stack.axis = .vertical
         stack.spacing = 4
         
         addSubview(stack)
-        stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
-    }
+        stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 8)    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

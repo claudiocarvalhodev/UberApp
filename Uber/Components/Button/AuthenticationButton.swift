@@ -9,17 +9,19 @@
 import UIKit
 
 class AuthenticationButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
-        backgroundColor = .uberBlue
+        
         layer.cornerRadius = 5
+        backgroundColor = .uberBlue
+        setTitleColor(.white, for: .normal)
         heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 

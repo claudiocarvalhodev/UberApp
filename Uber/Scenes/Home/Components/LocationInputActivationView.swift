@@ -8,44 +8,45 @@
 
 import UIKit
 
-protocol LocationInputActivationViewDelegate: class {
+protocol LocationInputActivationViewDelegate {
     func presentLocationInputView()
 }
 
 class LocationInputActivationView: UIView {
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    weak var delegate: LocationInputActivationViewDelegate?
+    var delegate: LocationInputActivationViewDelegate?
     
-    private let indicatorView: UIView = {
+    let indicatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         return view
     }()
     
-    private let placeholderLabel: UILabel = {
+    let placeholderLabel: UILabel = {
         let label = UILabel()
         label.text = "Where to?"
-        label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 18)
         return label
     }()
     
-    // MARK: Lifecycle
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        configureGestureRecognizer()
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Selectors
     
-    @objc func presentLocationInputView() {
+    @objc func handleViewTapped() {
         delegate?.presentLocationInputView()
     }
     
@@ -61,9 +62,10 @@ class LocationInputActivationView: UIView {
         
         addSubview(placeholderLabel)
         placeholderLabel.centerY(inView: self, leftAnchor: indicatorView.rightAnchor, paddingLeft: 20)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(presentLocationInputView))
-        addGestureRecognizer(tap)
     }
     
+    func configureGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleViewTapped))
+        addGestureRecognizer(tap)
+    }
 }

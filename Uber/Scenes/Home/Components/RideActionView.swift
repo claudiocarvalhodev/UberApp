@@ -42,7 +42,7 @@ enum ButtonAction: CustomStringConvertible {
         case .cancel: return "CANCEL RIDE"
         case .getDirections: return "GET DIRECTIONS"
         case .pickup: return "PICKUP PASSENGER"
-        case .dropOff: return "DROP OF PASSENGER"
+        case .dropOff: return "DROP OFF PASSENGER"
         }
     }
     
@@ -62,15 +62,12 @@ class RideActionView: UIView {
         }
     }
     
-    
     var buttonAction = ButtonAction()
     weak var delegate: RideActionViewDelegate?
     var user: User?
     
     var config = RideActionViewConfiguration() {
-        didSet {
-            configureUI(withConfig: config)
-        }
+        didSet { configureUI(withConfig: config) }
     }
     
     private let titleLabel: UILabel = {
@@ -102,18 +99,18 @@ class RideActionView: UIView {
     private let infoViewLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30)
-        label.text = "X"
         label.textColor = .white
+        label.text = "X"
         return label
     }()
     
     private let uberInfoLabel: UILabel = {
-         let label = UILabel()
-         label.font = UIFont.systemFont(ofSize: 18)
-         label.text = "UberX"
-         label.textAlignment = .center
-         return label
-     }()
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.text = "UberX"
+        label.textAlignment = .center
+        return label
+    }()
     
     private let actionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -130,7 +127,6 @@ class RideActionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
         backgroundColor = .white
         addShadow()
         
@@ -138,6 +134,7 @@ class RideActionView: UIView {
         stack.axis = .vertical
         stack.spacing = 4
         stack.distribution = .fillEqually
+        
         addSubview(stack)
         stack.centerX(inView: self)
         stack.anchor(top: topAnchor, paddingTop: 12)
@@ -155,21 +152,16 @@ class RideActionView: UIView {
         let separatorView = UIView()
         separatorView.backgroundColor = .lightGray
         addSubview(separatorView)
-        separatorView.anchor(top: uberInfoLabel.bottomAnchor,
-                             left: leftAnchor,
-                             right: rightAnchor,
-                             paddingTop: 12, height: 0.75)
+        separatorView.anchor(top: uberInfoLabel.bottomAnchor, left: leftAnchor,
+                             right: rightAnchor, paddingTop: 4, height: 0.75)
         
         addSubview(actionButton)
-        actionButton.anchor(left: leftAnchor,
-                            bottom: safeAreaLayoutGuide.bottomAnchor,
-                            right: rightAnchor,
-                            paddingLeft: 12, paddingBottom: 12, paddingRight: 12, height: 50)
-        
-        
+        actionButton.anchor(left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor,
+                            right: rightAnchor, paddingLeft: 12, paddingBottom: 12,
+                            paddingRight: 12, height: 50)
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -182,7 +174,7 @@ class RideActionView: UIView {
         case .cancel:
             delegate?.cancelTrip()
         case .getDirections:
-            print("DEBUG: Handle get directions...")
+            print("DEBUG: Handle get directions..")
         case .pickup:
             delegate?.pickupPassenger()
         case .dropOff:
@@ -190,11 +182,9 @@ class RideActionView: UIView {
         }
     }
     
-    
     // MARK: - Helper Functions
     
     private func configureUI(withConfig config: RideActionViewConfiguration) {
-        
         switch config {
         case .requestRide:
             buttonAction = .requestRide
@@ -224,27 +214,25 @@ class RideActionView: UIView {
             }
             
         case .pickupPassenger:
-            
             titleLabel.text = "Arrived At Passenger Location"
             buttonAction = .pickup
             actionButton.setTitle(buttonAction.description, for: .normal)
             
         case .tripInProgress:
-           
             guard let user = user else { return }
             
             if user.accountType == .driver {
-                actionButton.setTitle(buttonAction.description, for: .normal)
+                actionButton.setTitle("TRIP IN PROGRESS", for: .normal)
                 actionButton.isEnabled = false
             } else {
                 buttonAction = .getDirections
                 actionButton.setTitle(buttonAction.description, for: .normal)
             }
             
-            titleLabel.text = "En Route to Destination"
+            titleLabel.text = "En Route To Destination"
+            addressLabel.text = ""
             
         case .endTrip:
-            
             guard let user = user else { return }
             
             if user.accountType == .driver {
