@@ -95,11 +95,11 @@ Below is an overview of the functionality implemented:
 
 <table style="width:100%">
   <tr>
-  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/11.png" alt="News" width=400 height=375/></td>
-  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/12.png" alt="News" width=400 height=375/></td>
-  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/13.png" alt="News" width=400 height=375/></td>
-  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/14.png" alt="News" width=400 height=375/></td>
-  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/15.png" alt="News" width=400 height=375/></td>
+  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/11.png" alt="News" /></td>
+  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/12.png" alt="News" /></td>
+  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/13.png" alt="News" /></td>
+  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/14.png" alt="News" /></td>
+  <td><img src="https://github.com/claudiocarvalhodev/UberApp/blob/develop/Screenshots/Portrait/Passenger/15.png" alt="News" /></td>
   </tr>
 </table>
 
