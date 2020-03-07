@@ -3,27 +3,87 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9110E993240A3A40001C4D05 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110E992240A3A40001C4D05 /* Service.swift */; };
+		9110E996240A43BB001C4D05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110E995240A43BB001C4D05 /* User.swift */; };
+		9114EB8E24089671000DD644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9114EB8D24089671000DD644 /* GoogleService-Info.plist */; };
+		9114EB912408A845000DD644 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114EB902408A845000DD644 /* HomeViewController.swift */; };
+		911D0DD5240E53F100ED9F0A /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D0DD4240E53F100ED9F0A /* RideActionView.swift */; };
+		911D0DD7240E669E00ED9F0A /* MapKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D0DD6240E669E00ED9F0A /* MapKit+Extensions.swift */; };
+		911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */; };
+		911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */; };
+		911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FBFBD2409FA2B00EECF43 /* LocationCell.swift */; };
+		91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91230B63240AC81B008680E3 /* LocationHandler.swift */; };
+		912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621A8240DB944003FC8FF /* DriverAnnotation.swift */; };
+		912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */; };
+		912FA5BE2411699800891851 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5BD2411699800891851 /* MenuViewController.swift */; };
+		912FA5C0241169AE00891851 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5BF241169AE00891851 /* ContainerViewController.swift */; };
+		912FA5C3241175E500891851 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C2241175E500891851 /* MenuHeader.swift */; };
+		912FA5C62411ACFD00891851 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C52411ACFD00891851 /* SettingsViewController.swift */; };
+		912FA5CA2411B3C400891851 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5C92411B3C400891851 /* UserInfoHeader.swift */; };
+		912FA5CC2411BFE700891851 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA5CB2411BFE700891851 /* AddLocationViewController.swift */; };
+		9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF0E240EB82A003B0E43 /* Trip.swift */; };
+		9133BF13240ECBC2003B0E43 /* PickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133BF12240ECBC2003B0E43 /* PickupViewController.swift */; };
+		915B7E49240EF035001EE092 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */; };
+		91870B222412B51500E8D372 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91870B212412B51500E8D372 /* CircularProgressView.swift */; };
 		91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED02408239E00681DDF /* AppDelegate.swift */; };
 		91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED22408239E00681DDF /* SceneDelegate.swift */; };
-		91DA1ED52408239E00681DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1ED42408239E00681DDF /* ViewController.swift */; };
-		91DA1ED82408239E00681DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED62408239E00681DDF /* Main.storyboard */; };
 		91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1ED92408239F00681DDF /* Assets.xcassets */; };
 		91DA1EDD2408239F00681DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */; };
+		91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EEB2408265E00681DDF /* LoginViewController.swift */; };
+		91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */; };
+		91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */; };
+		91DA1EF324082D3D00681DDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF224082D3D00681DDF /* README.md */; };
+		91DA1EF524082D5F00681DDF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91DA1EF424082D5F00681DDF /* .gitignore */; };
+		91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */; };
+		91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */; };
+		91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA1EFD2408332F00681DDF /* SignUpViewController.swift */; };
+		F23CBD886923566EE47A08DF /* Pods_Uber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B368458FE23074E49A6F1979 /* Pods_Uber.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D341B933DF492089BBBA3EB /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
+		9110E992240A3A40001C4D05 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9110E995240A43BB001C4D05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9114EB8D24089671000DD644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9114EB902408A845000DD644 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		911D0DD4240E53F100ED9F0A /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
+		911D0DD6240E669E00ED9F0A /* MapKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+Extensions.swift"; sourceTree = "<group>"; };
+		911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
+		911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		911FBFBD2409FA2B00EECF43 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		91230B63240AC81B008680E3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		912621A8240DB944003FC8FF /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPlacemark+Extensions.swift"; sourceTree = "<group>"; };
+		912FA5BD2411699800891851 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		912FA5BF241169AE00891851 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		912FA5C2241175E500891851 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
+		912FA5C52411ACFD00891851 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		912FA5C92411B3C400891851 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		912FA5CB2411BFE700891851 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		9133BF0E240EB82A003B0E43 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		9133BF12240ECBC2003B0E43 /* PickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupViewController.swift; sourceTree = "<group>"; };
+		915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		91870B212412B51500E8D372 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		91DA1ECD2408239E00681DDF /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DA1ED02408239E00681DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DA1ED22408239E00681DDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91DA1ED42408239E00681DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91DA1ED72408239E00681DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DA1ED92408239F00681DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DA1EDC2408239F00681DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91DA1EDE2408239F00681DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DA1EEB2408265E00681DDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EF224082D3D00681DDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91DA1EF424082D5F00681DDF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
+		91DA1EFD2408332F00681DDF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B368458FE23074E49A6F1979 /* Pods_Uber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C443EF3A1A63433B470191C5 /* Pods-Uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.debug.xcconfig"; path = "Target Support Files/Pods-Uber/Pods-Uber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +91,157 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23CBD886923566EE47A08DF /* Pods_Uber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41FA1B2A719870D73FBAC7DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C443EF3A1A63433B470191C5 /* Pods-Uber.debug.xcconfig */,
+				6D341B933DF492089BBBA3EB /* Pods-Uber.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F77F95B6F1E18B6FBDD29AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B368458FE23074E49A6F1979 /* Pods_Uber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9110E991240A3A21001C4D05 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9110E992240A3A40001C4D05 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9110E994240A4357001C4D05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9110E995240A43BB001C4D05 /* User.swift */,
+				912621A8240DB944003FC8FF /* DriverAnnotation.swift */,
+				9133BF0E240EB82A003B0E43 /* Trip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9114EB8F2408A820000DD644 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				911FBFB72409CF9100EECF43 /* Components */,
+				9114EB902408A845000DD644 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		911D74912413488E00E686E3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EF82408323200681DDF /* Components */,
+				91DA1EEA2408262E00681DDF /* Login */,
+				91DA1EFC240832FF00681DDF /* Sign Up */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		911FBFB72409CF9100EECF43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				911FBFBC2409FA0900EECF43 /* Cell */,
+				911FBFB82409CFDE00EECF43 /* LocationInputActivationView.swift */,
+				911FBFBA2409DD6E00EECF43 /* LocationInputView.swift */,
+				911D0DD4240E53F100ED9F0A /* RideActionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		911FBFBC2409FA0900EECF43 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				911FBFBD2409FA2B00EECF43 /* LocationCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		91230B62240AC7EB008680E3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91230B63240AC81B008680E3 /* LocationHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		912FA5BC241168E800891851 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C42411ACCE00891851 /* Settings */,
+				912FA5C1241175D100891851 /* Components */,
+				912FA5BD2411699800891851 /* MenuViewController.swift */,
+				912FA5BF241169AE00891851 /* ContainerViewController.swift */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		912FA5C1241175D100891851 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C2241175E500891851 /* MenuHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		912FA5C42411ACCE00891851 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C82411B3A100891851 /* Components */,
+				912FA5C52411ACFD00891851 /* SettingsViewController.swift */,
+				912FA5CB2411BFE700891851 /* AddLocationViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		912FA5C82411B3A100891851 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				912FA5C92411B3C400891851 /* UserInfoHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9133BF11240ECB9F003B0E43 /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				91870B202412B4F600E8D372 /* Components */,
+				9133BF12240ECBC2003B0E43 /* PickupViewController.swift */,
+			);
+			path = Pickup;
+			sourceTree = "<group>";
+		};
+		91870B202412B4F600E8D372 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91870B212412B51500E8D372 /* CircularProgressView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		91DA1EC42408239E00681DDF = {
 			isa = PBXGroup;
 			children = (
 				91DA1ECF2408239E00681DDF /* Uber */,
+				91DA1EF224082D3D00681DDF /* README.md */,
+				91DA1EF424082D5F00681DDF /* .gitignore */,
 				91DA1ECE2408239E00681DDF /* Products */,
+				41FA1B2A719870D73FBAC7DD /* Pods */,
+				4F77F95B6F1E18B6FBDD29AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +256,115 @@
 		91DA1ECF2408239E00681DDF /* Uber */ = {
 			isa = PBXGroup;
 			children = (
-				91DA1ED02408239E00681DDF /* AppDelegate.swift */,
-				91DA1ED22408239E00681DDF /* SceneDelegate.swift */,
-				91DA1ED42408239E00681DDF /* ViewController.swift */,
-				91DA1ED62408239E00681DDF /* Main.storyboard */,
-				91DA1ED92408239F00681DDF /* Assets.xcassets */,
-				91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */,
-				91DA1EDE2408239F00681DDF /* Info.plist */,
+				91DA1EE4240824D000681DDF /* Application */,
+				91DA1EE5240824E400681DDF /* Support Files */,
+				9110E991240A3A21001C4D05 /* Service */,
+				9110E994240A4357001C4D05 /* Model */,
+				91DA1EE6240824F400681DDF /* Resources */,
+				91DA1EE82408251700681DDF /* Scenes */,
 			);
 			path = Uber;
+			sourceTree = "<group>";
+		};
+		91DA1EE4240824D000681DDF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1ED02408239E00681DDF /* AppDelegate.swift */,
+				91DA1ED22408239E00681DDF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		91DA1EE5240824E400681DDF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9114EB8D24089671000DD644 /* GoogleService-Info.plist */,
+				91DA1EDE2408239F00681DDF /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		91DA1EE6240824F400681DDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91230B62240AC7EB008680E3 /* Utils */,
+				91DA1EED24082ADA00681DDF /* Extensions */,
+				91DA1EE72408250300681DDF /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91DA1EE72408250300681DDF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1ED92408239F00681DDF /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		91DA1EE82408251700681DDF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EE92408252100681DDF /* Launch Screen */,
+				911D74912413488E00E686E3 /* Authentication */,
+				9114EB8F2408A820000DD644 /* Home */,
+				9133BF11240ECB9F003B0E43 /* Pickup */,
+				912FA5BC241168E800891851 /* Side Menu */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		91DA1EE92408252100681DDF /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		91DA1EEA2408262E00681DDF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EEB2408265E00681DDF /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		91DA1EED24082ADA00681DDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EEE24082AF800681DDF /* UIView+Extensions.swift */,
+				91DA1EF024082C4B00681DDF /* UIColor+Extensions.swift */,
+				91DA1EF6240831D300681DDF /* UITextField+Extensions.swift */,
+				912621AA240DD473003FC8FF /* MKPlacemark+Extensions.swift */,
+				911D0DD6240E669E00ED9F0A /* MapKit+Extensions.swift */,
+				915B7E48240EF035001EE092 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91DA1EF82408323200681DDF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EF92408323E00681DDF /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		91DA1EF92408323E00681DDF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EFA2408327A00681DDF /* AuthenticationButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		91DA1EFC240832FF00681DDF /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				91DA1EFD2408332F00681DDF /* SignUpViewController.swift */,
+			);
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91DA1EE12408239F00681DDF /* Build configuration list for PBXNativeTarget "Uber" */;
 			buildPhases = (
+				45F3C9A756936A4130918561 /* [CP] Check Pods Manifest.lock */,
 				91DA1EC92408239E00681DDF /* Sources */,
 				91DA1ECA2408239E00681DDF /* Frameworks */,
 				91DA1ECB2408239E00681DDF /* Resources */,
+				C93B0590FC3B9C7B5566C327 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,36 +427,98 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DA1EF524082D5F00681DDF /* .gitignore in Resources */,
+				91DA1EF324082D3D00681DDF /* README.md in Resources */,
+				9114EB8E24089671000DD644 /* GoogleService-Info.plist in Resources */,
 				91DA1EDD2408239F00681DDF /* LaunchScreen.storyboard in Resources */,
 				91DA1EDA2408239F00681DDF /* Assets.xcassets in Resources */,
-				91DA1ED82408239E00681DDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45F3C9A756936A4130918561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Uber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C93B0590FC3B9C7B5566C327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uber/Pods-Uber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uber/Pods-Uber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Uber/Pods-Uber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91DA1EC92408239E00681DDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DA1ED52408239E00681DDF /* ViewController.swift in Sources */,
+				9133BF0F240EB82A003B0E43 /* Trip.swift in Sources */,
+				91230B64240AC81B008680E3 /* LocationHandler.swift in Sources */,
+				911FBFB92409CFDE00EECF43 /* LocationInputActivationView.swift in Sources */,
+				912FA5CC2411BFE700891851 /* AddLocationViewController.swift in Sources */,
+				912FA5C3241175E500891851 /* MenuHeader.swift in Sources */,
+				9110E993240A3A40001C4D05 /* Service.swift in Sources */,
+				91DA1EEC2408265E00681DDF /* LoginViewController.swift in Sources */,
+				91DA1EF124082C4B00681DDF /* UIColor+Extensions.swift in Sources */,
+				915B7E49240EF035001EE092 /* UIViewController+Extensions.swift in Sources */,
+				91DA1EFE2408332F00681DDF /* SignUpViewController.swift in Sources */,
+				911D0DD7240E669E00ED9F0A /* MapKit+Extensions.swift in Sources */,
+				91DA1EFB2408327A00681DDF /* AuthenticationButton.swift in Sources */,
+				912FA5C0241169AE00891851 /* ContainerViewController.swift in Sources */,
+				9110E996240A43BB001C4D05 /* User.swift in Sources */,
+				912FA5CA2411B3C400891851 /* UserInfoHeader.swift in Sources */,
+				912621A9240DB944003FC8FF /* DriverAnnotation.swift in Sources */,
 				91DA1ED12408239E00681DDF /* AppDelegate.swift in Sources */,
+				911D0DD5240E53F100ED9F0A /* RideActionView.swift in Sources */,
+				911FBFBE2409FA2B00EECF43 /* LocationCell.swift in Sources */,
+				9114EB912408A845000DD644 /* HomeViewController.swift in Sources */,
+				9133BF13240ECBC2003B0E43 /* PickupViewController.swift in Sources */,
+				91DA1EF7240831D300681DDF /* UITextField+Extensions.swift in Sources */,
+				912621AB240DD473003FC8FF /* MKPlacemark+Extensions.swift in Sources */,
+				91DA1EEF24082AF800681DDF /* UIView+Extensions.swift in Sources */,
+				91870B222412B51500E8D372 /* CircularProgressView.swift in Sources */,
 				91DA1ED32408239E00681DDF /* SceneDelegate.swift in Sources */,
+				912FA5C62411ACFD00891851 /* SettingsViewController.swift in Sources */,
+				911FBFBB2409DD6E00EECF43 /* LocationInputView.swift in Sources */,
+				912FA5BE2411699800891851 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		91DA1ED62408239E00681DDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91DA1ED72408239E00681DDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91DA1EDB2408239F00681DDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,10 +646,11 @@
 		};
 		91DA1EE22408239F00681DDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C443EF3A1A63433B470191C5 /* Pods-Uber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Uber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uber/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +664,11 @@
 		};
 		91DA1EE32408239F00681DDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D341B933DF492089BBBA3EB /* Pods-Uber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Uber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uber/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
